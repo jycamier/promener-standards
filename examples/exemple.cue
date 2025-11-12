@@ -26,11 +26,12 @@ schemas.#Promener & {
 				#commonLabels: labels.#C4Labels
 			}
 			metrics: {
-				test_test: {
-					namespace: "test"
-					subsystem: "test"
-					help: "mon help"
-					type: "gauge"
+				// Using validator to ensure metric name follows Prometheus conventions
+				test: {
+					namespace: "foo"
+					subsystem: "bar"
+					help:      "Foobar help"
+					type:      "counter"
 				}
 			}
 		}

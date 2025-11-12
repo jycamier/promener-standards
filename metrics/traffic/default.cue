@@ -11,9 +11,7 @@ import (
 
 #DefaultTrafficMetrics: {
 	// #commonLabels is a parameter that should be set when composing these metrics
-	#commonLabels: [string]: {
-		description: string
-	}
+	#commonLabels: [string]: schemas.#Label
 
 	metrics: {
 

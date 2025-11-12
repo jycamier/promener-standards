@@ -30,14 +30,17 @@ package schemas
 	annotations?: [string]: string
 }
 
+#Label: {
+	description: string
+	inherited?:  string
+}
+
 #Metric: {
 	namespace:  string
 	subsystem?: string
 	type:       "counter" | "gauge" | "histogram" | "summary"
 	help:       string
-	labels?: [string]: {
-		description: string
-	}
+	labels?: [string]: #Label
 	constLabels?: [string]: {
 		value:       string
 		description: string
